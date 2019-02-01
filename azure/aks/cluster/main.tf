@@ -15,7 +15,7 @@ resource "random_string" "fqdn" {
 # Create the Kubernetes cluster
 resource "azurerm_kubernetes_cluster" "k8scluster" {
   name                = "terraformk8scluster"
-  location            = "${azurerm_resource_group.k8srg.location}"
+  location            = "${var.location}"
   resource_group_name = "${azurerm_resource_group.k8srg.name}"
   dns_prefix          = "${random_string.fqdn.result}"
 
