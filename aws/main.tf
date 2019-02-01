@@ -56,6 +56,7 @@ resource "aws_instance" "myec2" {
 }
 
 resource "aws_eip" "myip" {
+  
   instance = "${aws_instance.myec2.id}"
 }
 
