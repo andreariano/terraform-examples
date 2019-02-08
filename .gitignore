@@ -31,3 +31,6 @@ kubeconfig
 # !example_override.tf
 
 # End of https://www.gitignore.io/api/terraform
+
+### Packer files ###
+variables.json
